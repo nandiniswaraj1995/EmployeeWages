@@ -9,6 +9,7 @@ namespace EmployeeWages
             DailyWage.dailyWage();
             PartTimeWage.partTimeWage();
             PartTimeUsingSwitchStmt.partTimeUsingSwitchStmt();
+            MonthlyWages.monthlyWages();
         }
     }
 }
