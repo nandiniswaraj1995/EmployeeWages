@@ -6,7 +6,7 @@ namespace EmployeeWages
 {
     class PartTimeWage
     {
-        public static void partTimeWage()
+        public static  int partTimeWage()
         {
             int IS_FULL_TIME = 1;
             int IS_PART_TIME = 2;
@@ -22,7 +22,8 @@ namespace EmployeeWages
 
             empWage = empHrs * EMP_RATE_PER_HOUT;
 
-            Console.WriteLine("Emp Wage :" + empWage);
+            //Console.WriteLine("Emp Wage :" + empWage);
+            return empWage;
         }
     }
     

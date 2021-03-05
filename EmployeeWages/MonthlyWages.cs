@@ -6,31 +6,43 @@ namespace EmployeeWages
 {
     class MonthlyWages
     {
+        public const int IS_PART_TIME = 1;
+        public const int IS_FULL_TIME = 2;
+        public const int EMP_RATE_PER_HOUR = 20;
+        public const int NUM_OF_WORKING_DAYS = 20;
+
         public static void monthlyWages()
         {
-            int IS_PRESENT = 1;
-            int EMP_RATE_PER_HOUT = 20;
-            int empHrs = 8;
+            int empHrs = 0;
             int empWage = 0;
-            int count = 0;
+            int totalEmpWage = 0;
             Random random = new Random();
-            for (int i = 1; i <= 20; i++)
+
+            for (int day = 0; day < NUM_OF_WORKING_DAYS; day++)
             {
-                int empCheck = random.Next(0, 2);
-                if (empCheck == IS_PRESENT)
+
+                int empCheck = random.Next(0, 3);
+                switch (empCheck)
                 {
-                    count++;
-                    
+                    case IS_PART_TIME:
+                        empHrs = 4;
+                        break;
+                    case IS_FULL_TIME:
+                        empHrs = 8;
+                        break;
+                    default:
+                        empHrs = 0;
+                        break;
                 }
-
+                empWage = empHrs * EMP_RATE_PER_HOUR;
+                totalEmpWage += empWage;
+                Console.WriteLine("Emp Wage: " + empWage);
             }
-            empWage = count * empHrs * EMP_RATE_PER_HOUT;
+            Console.WriteLine("Total Emp Wage: " + totalEmpWage);
+        }
 
-            Console.WriteLine("Employee Wages For "+count+" Working Days :" + empWage);
-            
+
 
 
     }
-
-}
 }
