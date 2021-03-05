@@ -6,7 +6,8 @@ namespace EmployeeWages
     {
         static void Main(string[] args)
         {
-            MonthlyWages.monthlyWages();
+           // MonthlyWages.monthlyWages();
+            Hours100OrMonth.hours100OrMonth();
         }     
     }
 }
