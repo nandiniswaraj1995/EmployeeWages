@@ -12,25 +12,23 @@ namespace InterfaceApproach
         public int maxHoursPerMonth;
         public int totalEmpWage;
 
-        public CompanyEmpWage(String company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+        public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             this.company = company;
             this.empRatePerHour = empRatePerHour;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHoursPerMonth = maxHoursPerMonth;
-
+            this.totalEmpWage = 0;
         }
+
         public void setTotalEmpWage(int totalEmpWage)
         {
-          //  Console.WriteLine("called");
-           // Console.WriteLine("value of totalEmpWage" + totalEmpWage);
-
             this.totalEmpWage = totalEmpWage;
-           // Console.WriteLine("value of totalEmpWage" + totalEmpWage);
         }
-        public String toString()
+
+        public string toString()
         {
-            return "Tatal Emp Wage For Company " + this.company + " is :" + totalEmpWage;
+            return "Total Emp Wage for Company: " + this.company + " is: " + this.totalEmpWage;
         }
 
     }
